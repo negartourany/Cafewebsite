@@ -54,7 +54,6 @@ def page():
         sockets = "Yes"
     else:
         sockets = "No"
-    print(sockets)
     toilet = cafe_id.has_toilet
     if toilet:
         toilet = "Yes"
