@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cafe</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="static/assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="static/assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body id="page_body" >
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header" class="alt">
+        <span class="logo"
+          ><span
+            style="
+              color: rgb(255, 255, 255);
+              font-size: 3.25em;
+              font-weight: 300;
+              letter-spacing: -0.025em;
+            "
+            >{{cafe_id.name}}</span
+          ></span
+        >
+        <p>{{cafe_id.location}}</p>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav" class="">
+        <ul>
+          <li><a href="{{url_for('home')}}" class="">Home</a></li>
+          &nbsp;
+          <li><a href="#intro" class="">Location</a></li>
+          &nbsp;
+          <li><a href="#second" class="active">Add a Café</a></li>
+        </ul>
+      </nav>
+
+      <!-- properties -->
+      <div id="main">
+        <section id="second" class="main special">
+          <header class="major">
+            <h2><span style="font-size: 37.3333px">Café facilities</span></h2>
+            <p>Here you can see more details about the cafe</p>
+          </header>
+          <ul class="statistics">
+            <li class="style1">
+              <i class="fa-solid fa-plug fa-2xl"></i>
+              <br />
+              <strong style="margin-top: 10px; margin-bottom: 5px"
+                >Sockets</strong
+              >
+              {{sockets}}
+            </li>
+            <li class="style2">
+              <i class="fa-solid fa-restroom fa-2xl"></i>
+              <strong style="margin-top: 10px; margin-bottom: 5px"
+                >Toilet</strong
+              >
+              {{toilet}}
+            </li>
+            <li class="style3">
+              <i class="fa-solid fa-wifi fa-2xl"></i>
+              <strong style="margin-top: 10px; margin-bottom: 5px">Wifi</strong>
+              {{wifi}}
+            </li>
+            <li class="style4">
+              <i class="fa-solid fa-phone fa-2xl"></i>
+              <strong style="margin-top: 10px; margin-bottom: 5px"
+                >Take Calls?</strong
+              >
+              {{call}}
+            </li>
+            <li class="style5">
+              <i class="fa-solid fa-chair fa-2xl"></i>
+              <strong style="margin-top: 10px; margin-bottom: 5px"
+                >Seats</strong
+              >
+              {{cafe_id.seats}}
+            </li>
+            <li class="style1">
+              <i class="fa-solid fa-money-bill-wave fa-2xl"></i>
+              <strong style="margin-top: 10px; margin-bottom: 5px"
+                >Coffee</strong
+              >
+              {{cafe_id.coffee_price}}
+            </li>
+          </ul>
+        </section>
+
+        <!-- Location -->
+        <section id="intro" class="main" style=" padding-top: 200px;">
+          <div class="spotlight" style=" height: 350px;
+          margin-bottom: 0px;" >
+            <div class="content">
+              <header class="major">
+                <h2 style="margin-bottom: 200px;">Location</h2>
+              </header>
+            </div>
+            <div id="map_container">
+            {{map_html|safe}}
+              </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <section>
+          <h2>This is just a glimpse of what I can create</h2>
+          <p>
+            If you want to see more of my works, visit my portfolio website.
+          </p>
+          <ul class="actions">
+            <li><a href="generic.html" class="button">Learn More</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Contact Me</h2>
+          <dl class="alt">
+            <dt>Phone</dt>
+            <dd>+989203522384</dd>
+            <dt>Email</dt>
+            <dd>Negartoorany283@gmail.com</dd>
+          </dl>
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands fa-twitter alt"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            &nbsp;
+            <li>
+              <a href="#" class="icon brands fa-instagram alt"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands fa-github alt"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+          </ul>
+        </section>
+        <p class="copyright">© Created by Negar</p>
+      </footer>
+
+
+    <!-- Scripts -->
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/jquery.scrollex.min.js"></script>
+    <script src="static/assets/js/jquery.scrolly.min.js"></script>
+    <script src="static/assets/js/browser.min.js"></script>
+    <script src="static/assets/js/breakpoints.min.js"></script>
+    <script src="static/assets/js/util.js"></script>
+    <script src="static/assets/js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/ad7f1ccdf7.js"
+      crossorigin="anonymous"
+    ></script>
+      </div>
+  </body>
+</html>
